@@ -29,6 +29,7 @@
             background-color: lightcoral;
             display: inline-block;
             padding: 10px;
+            font-size: 16px;
             transition: background-color 0.3s ease;
         }
 
@@ -56,25 +57,25 @@
     <!--
         Things to address:
         X 1. Contrast
-        2. Semantics
+        X 2. Semantics
         3. Focus on error message
     -->
-    <div id="form" class="form">
-        <div class="heading">Sign In</div>
+    <form id="form" class="form">
+        <h1 class="heading">Sign In</h1>
         <p class="error hidden">
             Username and password are required.
         </p>
         <div class="field-row">
-            <div class="label">Username</div>
-            <input type="text" class="field" />
+            <label for="username" class="label">Username</label>
+            <input id="username" type="text" class="field" />
         </div>
         <div class="field-row">
-            <div class="label">Password</div>
-            <input type="password" class="field"/>
+            <label for="password" class="label">Password</label>
+            <input id="password" type="password" class="field"/>
         </div>
 
-        <div id="button" class="button">Login</div>
-    </div>
+        <button id="button" class="button">Login</button>
+    </form>
 
     <script>
         let button = document.getElementById("button");
